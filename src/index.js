@@ -71,7 +71,7 @@ app.put('/api/student/:studentId', (req, res) => {
                     student.name = body.name;
                 }
                 if (body.hasOwnProperty("currentClass")) {
-                    student.currentClass = body.currentClass;
+                    student.currentClass = Number(body.currentClass);
                 }
                 if (body.hasOwnProperty("division")) {
                     student.division = body.division;
